@@ -1,0 +1,52 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "project",
+            "otherEntityName": "project",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "assignedTo",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "ticket"
+        },
+        {
+            "relationshipName": "label",
+            "otherEntityName": "label",
+            "relationshipType": "many-to-many",
+            "relationshipValidateRules": [],
+            "otherEntityField": "label",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "ticket"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dueDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "done",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170222193249",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "ticket",
+    "pagination": "pagination"
+}

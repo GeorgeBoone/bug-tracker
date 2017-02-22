@@ -1,0 +1,23 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "ticket",
+            "otherEntityName": "ticket",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "label"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "label",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170222190701",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "label",
+    "pagination": "no"
+}
